@@ -29,6 +29,21 @@ body {
   padding: 20px;
 }
 
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
 </style>
 </head>
 <body>
@@ -41,6 +56,22 @@ body {
 <div class="content">
   <h1><b>Welcome to Raph Web<b></h1>
   <p>Raph Justine Butial</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
 </center>
+<script>
+var video = document.getElementById("bv");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
 </body>
 </html>
